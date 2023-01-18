@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.principalController">
+    <children>
+      <ToolBar prefHeight="40.0" prefWidth="640.0">
+        <items>
+          <Button mnemonicParsing="false" text="Inicio" />
+            <Button mnemonicParsing="false" onAction="#trocarBusca" text="Busca" />
+        </items>
+      </ToolBar>
+      <TextField fx:id="txt_nome" layoutX="82.0" layoutY="83.0" />
+      <Text layoutX="21.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" wrappingWidth="47.0" />
+      <Text layoutX="21.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Para realizar a compra favor inserir seus dados" />
+      <Text layoutX="21.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RG" wrappingWidth="47.0" />
+      <TextField fx:id="txt_rg" layoutX="82.0" layoutY="132.0" />
+      <RadioButton layoutX="21.0" layoutY="211.0" mnemonicParsing="false" selected="true" text="Floripa">
+         <toggleGroup>
+            <ToggleGroup fx:id="destinos" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="21.0" layoutY="240.0" mnemonicParsing="false" text="São Paulo" toggleGroup="$destinos" />
+      <Text layoutX="21.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Destinos" wrappingWidth="47.0" />
+      <Button layoutX="21.0" layoutY="304.0" mnemonicParsing="false" onAction="#comprar" text="Comprar" />
+      <Label layoutX="459.0" layoutY="64.0" text="DETALHES DA PASSAGEM" />
+      <Label fx:id="txt_resultado" layoutX="500.0" layoutY="96.0" text="Label" />
+    </children>
+</AnchorPane>
