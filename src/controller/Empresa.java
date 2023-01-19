@@ -1,17 +1,20 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
 package controller;
+
+import model.Passagem;
 
 /**
  *
  * @author guilh
  */
-public class Empresa {
+public interface Empresa {
     
-    
-    
+    public Passagem criarPassagemOnibus(int passagem, int destino, String nome, int rg);
+    public Passagem criarPassagemAviao(int passagem, int destino, String nome, int rg);
+    public Passagem criarPassagemBarco(int passagem, int destino, String nome, int rg);
     
     
 }

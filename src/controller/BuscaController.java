@@ -33,7 +33,7 @@ public class BuscaController implements Initializable {
     
     @FXML
     public void trocarPrincipal(ActionEvent event) throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("principal.fxml"));  
+        Parent root = FXMLLoader.load(getClass().getResource("/view/principal.fxml"));  
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

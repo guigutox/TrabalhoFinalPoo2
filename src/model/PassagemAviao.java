@@ -10,7 +10,7 @@ import java.util.UUID;
  *
  * @author guilh
  */
-public class PassagemAviao implements Passagem{
+public class PassagemAviao extends Passagem{
      private float preco;
     private float distancia;
     private int tempo;
@@ -20,11 +20,11 @@ public class PassagemAviao implements Passagem{
     
     @Override
     //Gera uma passagem de onibus e retorna usando todos os parametros + dados gerados na classe
-    public PassagemAviao gerarPassagem(int destino, String nome, int rg){
+    public PassagemAviao gerarPassagem(int empresa, int destino, String nome, int rg){
         this.nome = nome;
         this.rg = rg;
         calcularTempo(destino);
-        calcularPreco(destino);
+        calcularPreco(destino, empresa);
         calcularDistancia(destino);
         this.id = gerarId();
         return this;
@@ -55,21 +55,43 @@ public class PassagemAviao implements Passagem{
     
    @Override
    //calcula o preço de viagem a partir do destino
-    public void calcularPreco(int destino) {
-            switch(destino){
-           //Sao paulo
-           case 1:
-               this.preco = (float) 400 ;
-               break;
-           //Fortaleza
-           case 2:
-               this.preco = (float) 1140.00;
-               break;
-            //Paraguai:
-           case 3:
-               this.preco = (float) 928.7;
-               break;
-       } 
+    public void calcularPreco(int empresa, int destino) {
+               
+        switch(empresa){
+            case 1:
+                 switch(destino){
+                    //Sao paulo
+                    case 1:
+                        this.preco = (float) 400 ;
+                        break;
+                    //Fortaleza
+                    case 2:
+                        this.preco = (float) 1140;
+                        break;
+                     //Paraguai:
+                    case 3:
+                        this.preco = (float) 928;
+                        break;
+                 }
+            break;
+            case 2:
+                 switch(destino){
+                    //Sao paulo
+                    case 1:
+                        this.preco = (float) 256 ;
+                        break;
+                    //Fortaleza
+                    case 2:
+                        this.preco = (float) 1300;
+                        break;
+                     //Paraguai:
+                    case 3:
+                        this.preco = (float) 572;
+                        break;
+                    }
+                
+                break;
+        }
     }
 
     @Override

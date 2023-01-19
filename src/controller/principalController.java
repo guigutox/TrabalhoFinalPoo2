@@ -24,6 +24,7 @@ import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
 import model.Empresa;
 import model.Passagem;
+import controller.EmpresaCometa;
 
 /**
  *
@@ -49,12 +50,15 @@ public class principalController implements Initializable {
 
     @FXML
     private ToggleGroup transporte;
+    
+    @FXML
+    private ToggleGroup empresa;
 
     
     
     @FXML
     public void trocarBusca(ActionEvent event) throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("busca.fxml"));  
+        Parent root = FXMLLoader.load(getClass().getResource("/view/busca.fxml"));  
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -63,7 +67,10 @@ public class principalController implements Initializable {
     
     @FXML
     public void comprar(ActionEvent event){
-        Empresa emp = new Empresa();
+        //Empresa emp = new Empresa();
+        EmpresaCometa empC = new EmpresaCometa();
+        EmpresaUniao empU = new EmpresaUniao();
+        
         String x = txt_rg.getText();
         int rg = Integer.parseInt(x);
         String nome = txt_nome.getText();
@@ -93,23 +100,50 @@ public class principalController implements Initializable {
         RadioButton transp = (RadioButton)transporte.getSelectedToggle();
         y = transp.getText();
         
-        //Converte o resultado da radio de transporte para o numero do local
-        switch (y) {
-            case "Ônibus":
-                //Cria uma passagem de onibus
-                p = emp.passagemOnibus(destino, rg, nome);
+        RadioButton empresa = (RadioButton)this.empresa.getSelectedToggle();
+        String empresaEscolhida = empresa.getText();
+        
+        switch(empresaEscolhida){
+            case "União":
+                switch (y) {
+                    case "Ônibus":
+                        //Cria uma passagem de onibus
+                       p = empC.criarPassagemOnibus(1,destino, nome, rg);
+                        break;
+                    case "Avião":
+                        //Cria uma passagem de aviao
+                        p = empC.criarPassagemAviao(1,destino, nome, rg);
+                        break;
+                    case "Barco":
+                        //Cria uma passagem de barco
+                        p = empC.criarPassagemBarco(1,destino, nome, rg);
+                        break;
+                    default:
+                        break;
+                 }
                 break;
-            case "Avião":
-                //Cria uma passagem de aviao
-                p = emp.passagemAviao(destino, rg, nome);
-                break;
-            case "Barco":
-                //Cria uma passagem de barco
-                p = emp.passagemBarco(destino, rg, nome);
-                break;
-            default:
+                
+                
+            case "Cometa":
+                switch (y) {
+                    case "Ônibus":
+                        //Cria uma passagem de onibus
+                        p = empU.criarPassagemOnibus(2,destino, nome, rg);
+                        break;
+                    case "Avião":
+                        //Cria uma passagem de aviao
+                        p = empU.criarPassagemAviao(2,destino, nome, rg);
+                        break;
+                    case "Barco":
+                        //Cria uma passagem de barco
+                         p = empU.criarPassagemBarco(2,destino, nome, rg);
+                        break;
+                    default:
+                        break;
+        }
                 break;
         }
+        
         
        txt_resultado.setText("Tipo de passagem:  "+y+"\n\n"+p.toString());
         
