@@ -18,9 +18,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
+import model.Empresa;
+import model.Passagem;
 
 /**
  *
@@ -30,6 +33,7 @@ public class principalController implements Initializable {
     private Stage stage;
     private Scene scene;
     private Parent root;
+    private Passagem p;
     
     
     @FXML
@@ -41,8 +45,10 @@ public class principalController implements Initializable {
     private TextField txt_rg;
 
     @FXML
-    private Label txt_resultado;
+    private TextArea txt_resultado;
 
+    @FXML
+    private ToggleGroup transporte;
 
     
     
@@ -57,16 +63,61 @@ public class principalController implements Initializable {
     
     @FXML
     public void comprar(ActionEvent event){
-        
+        Empresa emp = new Empresa();
         String x = txt_rg.getText();
         int rg = Integer.parseInt(x);
         String nome = txt_nome.getText();
         UUID uuid = UUID.randomUUID();
+        int destino = 0;
         
+        
+        //Pega o resultado da radio de destinos
         RadioButton local =(RadioButton)destinos.getSelectedToggle();
-        txt_resultado.setText(local.getText());
+        String y = local.getText();
+       
+        //Converte o resultado da radio de destino para o numero do local
+        switch (y) {
+            case "São Paulo":
+                destino = 1;
+                break;
+            case "Fortaleza":
+                destino = 2;
+                break;
+            case "Paraguai":
+                destino = 3;
+                break;
+            default:
+                break;
+        }
+         //Pega o resultado da radio de transporte
+        RadioButton transp = (RadioButton)transporte.getSelectedToggle();
+        y = transp.getText();
+        
+        //Converte o resultado da radio de transporte para o numero do local
+        switch (y) {
+            case "Ônibus":
+                //Cria uma passagem de onibus
+                p = emp.passagemOnibus(destino, rg, nome);
+                break;
+            case "Avião":
+                //Cria uma passagem de aviao
+                p = emp.passagemAviao(destino, rg, nome);
+                break;
+            case "Barco":
+                //Cria uma passagem de barco
+                p = emp.passagemBarco(destino, rg, nome);
+                break;
+            default:
+                break;
+        }
+        
+       txt_resultado.setText("Tipo de passagem:  "+y+"\n\n"+p.toString());
         
     }
+    
+    
+    
+    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
