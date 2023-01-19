@@ -5,17 +5,23 @@
 package controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import model.Passagem;
 
 /**
  *
  * @author guilh
  */
+
+
 public class main extends Application {
+    
+
     
     @Override
     public void start(Stage stage) throws Exception {

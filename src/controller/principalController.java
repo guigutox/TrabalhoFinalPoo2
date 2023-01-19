@@ -22,9 +22,9 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
-import model.Empresa;
 import model.Passagem;
 import controller.EmpresaCometa;
+import model.ArraySingleton;
 
 /**
  *
@@ -43,7 +43,7 @@ public class principalController implements Initializable {
     private TextField txt_nome;
     
     @FXML
-    private TextField txt_rg;
+    private TextField txt_cpf;
 
     @FXML
     private TextArea txt_resultado;
@@ -71,8 +71,8 @@ public class principalController implements Initializable {
         EmpresaCometa empC = new EmpresaCometa();
         EmpresaUniao empU = new EmpresaUniao();
         
-        String x = txt_rg.getText();
-        int rg = Integer.parseInt(x);
+        String cpf_txt = txt_cpf.getText();
+        int cpf = Integer.parseInt(cpf_txt);
         String nome = txt_nome.getText();
         UUID uuid = UUID.randomUUID();
         int destino = 0;
@@ -80,10 +80,10 @@ public class principalController implements Initializable {
         
         //Pega o resultado da radio de destinos
         RadioButton local =(RadioButton)destinos.getSelectedToggle();
-        String y = local.getText();
+        String destinos = local.getText();
        
         //Converte o resultado da radio de destino para o numero do local
-        switch (y) {
+        switch (destinos) {
             case "São Paulo":
                 destino = 1;
                 break;
@@ -98,25 +98,26 @@ public class principalController implements Initializable {
         }
          //Pega o resultado da radio de transporte
         RadioButton transp = (RadioButton)transporte.getSelectedToggle();
-        y = transp.getText();
+        String transporte = transp.getText();
         
+        //Pega o resultado do radio de empresa
         RadioButton empresa = (RadioButton)this.empresa.getSelectedToggle();
         String empresaEscolhida = empresa.getText();
         
         switch(empresaEscolhida){
             case "União":
-                switch (y) {
+                switch (transporte) {
                     case "Ônibus":
                         //Cria uma passagem de onibus
-                       p = empC.criarPassagemOnibus(1,destino, nome, rg);
+                       p = empC.criarPassagemOnibus(1,destino, nome, cpf);
                         break;
                     case "Avião":
                         //Cria uma passagem de aviao
-                        p = empC.criarPassagemAviao(1,destino, nome, rg);
+                        p = empC.criarPassagemAviao(1,destino, nome, cpf);
                         break;
                     case "Barco":
                         //Cria uma passagem de barco
-                        p = empC.criarPassagemBarco(1,destino, nome, rg);
+                        p = empC.criarPassagemBarco(1,destino, nome, cpf);
                         break;
                     default:
                         break;
@@ -125,44 +126,40 @@ public class principalController implements Initializable {
                 
                 
             case "Cometa":
-                switch (y) {
+                switch (transporte) {
                     case "Ônibus":
                         //Cria uma passagem de onibus
-                        p = empU.criarPassagemOnibus(2,destino, nome, rg);
+                        p = empU.criarPassagemOnibus(2,destino, nome, cpf);
                         break;
                     case "Avião":
                         //Cria uma passagem de aviao
-                        p = empU.criarPassagemAviao(2,destino, nome, rg);
+                        p = empU.criarPassagemAviao(2,destino, nome, cpf);
                         break;
                     case "Barco":
                         //Cria uma passagem de barco
-                         p = empU.criarPassagemBarco(2,destino, nome, rg);
+                         p = empU.criarPassagemBarco(2,destino, nome, cpf);
                         break;
                     default:
                         break;
         }
                 break;
         }
-        
-        
-       txt_resultado.setText("Tipo de passagem:  "+y+"\n\n"+p.toString());
+        //ADICIONA AO ARRAY O NOVO REGISTRO
+       ArraySingleton.getInstance().getArrayList().add(p);
+       txt_resultado.setText("Tipo de passagem:  "+transporte+"\nEmpresa: "+empresaEscolhida+"\n\n"+p.toString());
         
     }
-    
-    
-    
-    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         
-        txt_rg.textProperty().addListener(
+        txt_cpf.textProperty().addListener(
                 (obesrvable, oldValue, newValue)->{
                     try{
                         if(!newValue.equals("")) parseInt(newValue);
                     }catch(Exception ex){
-                        txt_rg.setText(oldValue);
+                        txt_cpf.setText(oldValue);
                     }
                 }
         

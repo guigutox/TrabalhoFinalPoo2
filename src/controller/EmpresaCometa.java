@@ -14,21 +14,21 @@ import model.PassagemOnibus;
 public class EmpresaCometa implements Empresa{
 
     @Override
-    public Passagem criarPassagemOnibus(int empresa, int destino, String nome, int rg) {
+    public Passagem criarPassagemOnibus(int empresa, int destino, String nome, int cpf) {
          PassagemOnibus x = new PassagemOnibus();
-        return(x.gerarPassagem(empresa, destino, nome, rg));
+        return(x.gerarPassagem(empresa, destino, nome, cpf));
     }
 
     @Override
-    public Passagem criarPassagemAviao(int empresa ,int destino, String nome, int rg) {
+    public Passagem criarPassagemAviao(int empresa ,int destino, String nome, int cpf) {
          PassagemOnibus x = new PassagemOnibus();
-        return(x.gerarPassagem(empresa,destino, nome, rg));
+        return(x.gerarPassagem(empresa,destino, nome, cpf));
     }
 
     @Override
-    public Passagem criarPassagemBarco(int empresa, int destino, String nome, int rg) {
+    public Passagem criarPassagemBarco(int empresa, int destino, String nome, int cpf) {
          PassagemOnibus x = new PassagemOnibus();
-        return(x.gerarPassagem(empresa, destino, nome, rg));
+        return(x.gerarPassagem(empresa, destino, nome, cpf));
     }
     
 }

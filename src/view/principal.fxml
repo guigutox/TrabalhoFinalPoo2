@@ -21,8 +21,8 @@
       <TextField fx:id="txt_nome" layoutX="82.0" layoutY="83.0" />
       <Text layoutX="21.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" wrappingWidth="47.0" />
       <Text layoutX="21.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Para realizar a compra favor inserir seus dados" />
-      <Text layoutX="21.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RG" wrappingWidth="47.0" />
-      <TextField fx:id="txt_rg" layoutX="82.0" layoutY="132.0" />
+      <Text layoutX="21.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF" wrappingWidth="47.0" />
+      <TextField fx:id="txt_cpf" layoutX="82.0" layoutY="132.0" />
       <RadioButton layoutX="17.0" layoutY="240.0" mnemonicParsing="false" selected="true" text="Fortaleza">
          <toggleGroup>
             <ToggleGroup fx:id="destinos" />

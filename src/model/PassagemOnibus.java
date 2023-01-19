@@ -16,15 +16,15 @@ public class PassagemOnibus extends Passagem{
     private float distancia;
     private int tempo;
     private String nome;
-    private int rg;
+    private int cpf;
     private UUID id;
     private int empresa;
     
     @Override
     //Gera uma passagem de onibus e retorna usando todos os parametros + dados gerados na classe
-    public PassagemOnibus gerarPassagem(int empresa,int destino, String nome, int rg){
+    public PassagemOnibus gerarPassagem(int empresa,int destino, String nome, int cpf){
         this.nome = nome;
-        this.rg = rg;
+        this.cpf= cpf;
         calcularTempo(destino);
         calcularPreco(destino, empresa);
         calcularDistancia(destino);
@@ -131,7 +131,7 @@ public class PassagemOnibus extends Passagem{
 
     @Override
     public String toString() {
-        return "ID: " + id + "\nRG: "+rg+"\nNome: "+nome+"\nTempo: "+tempo+"\nDistancia"+distancia+" km\nPreco: R$"+preco;
+         return "ID: " + id + "\nCPF: "+cpf+"\nNome: "+nome+"\nTempo: "+tempo+"hrs\nDistancia: "+distancia+" km\nPreco: R$"+preco;
     }
     
    
@@ -151,8 +151,8 @@ public class PassagemOnibus extends Passagem{
         return nome;
     }
 
-    public int getRg() {
-        return rg;
+    public int getCpf() {
+        return cpf;
     }
 
     @Override

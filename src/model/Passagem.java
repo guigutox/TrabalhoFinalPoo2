@@ -4,6 +4,8 @@
  */
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -16,10 +18,10 @@ public abstract class Passagem {
     public  abstract void calcularDistancia(int destino);
     public abstract void calcularTempo(int destino);
     public abstract UUID gerarId();
-    public abstract Passagem gerarPassagem(int empresa,int destino, String nome, int rg);
+    public abstract Passagem gerarPassagem(int empresa,int destino, String nome, int cpf);
     public abstract UUID getId();
     public abstract String getNome();
-    public abstract int getRg();
+    public abstract int getCpf();
     public abstract int getTempo();
     public abstract float getDistancia();
     public abstract float getPreco();
