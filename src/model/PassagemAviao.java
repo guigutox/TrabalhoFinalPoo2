@@ -10,17 +10,12 @@ import java.util.UUID;
  *
  * @author guilh
  */
-public class PassagemAviao extends Passagem{
-     private float preco;
-    private float distancia;
-    private int tempo;
-    private String nome;
-    private int cpf;
-    private UUID id;
-    
+public class PassagemAviao extends Passagem {
+
+
     @Override
     //Gera uma passagem de onibus e retorna usando todos os parametros + dados gerados na classe
-    public PassagemAviao gerarPassagem(int empresa, int destino, String nome, int cpf){
+    public PassagemAviao gerarPassagem(int empresa, int destino, String nome, int cpf) {
         this.nome = nome;
         this.cpf = cpf;
         calcularTempo(destino);
@@ -29,107 +24,101 @@ public class PassagemAviao extends Passagem{
         this.id = gerarId();
         return this;
     }
-    
-    
+
     @Override
     //calcula o tempo de viagem a partir do destino
-    public void calcularTempo(int destino){
-           switch(destino){
-           //Sao paulo
-           case 1:
-               this.tempo = 1;
-               break;
-           //Fortaleza
-           case 2:
-               this.tempo = 8;
-               break;
-            //Paraguai:
-           case 3:
-               this.tempo = 4;
-               break;
-       } 
-        
-        
-    }
-    
-    
-   @Override
-   //calcula o preço de viagem a partir do destino
-    public void calcularPreco(int empresa, int destino) {
-               
-        switch(empresa){
+    public void calcularTempo(int destino) {
+        switch (destino) {
+            //Sao paulo
             case 1:
-                 switch(destino){
-                    //Sao paulo
-                    case 1:
-                        this.preco = (float) 400 ;
-                        break;
-                    //Fortaleza
-                    case 2:
-                        this.preco = (float) 1140;
-                        break;
-                     //Paraguai:
-                    case 3:
-                        this.preco = (float) 928;
-                        break;
-                 }
-            break;
+                this.tempo = 1;
+                break;
+            //Fortaleza
             case 2:
-                 switch(destino){
-                    //Sao paulo
-                    case 1:
-                        this.preco = (float) 256 ;
-                        break;
-                    //Fortaleza
-                    case 2:
-                        this.preco = (float) 1300;
-                        break;
-                     //Paraguai:
-                    case 3:
-                        this.preco = (float) 572;
-                        break;
-                    }
-                
+                this.tempo = 8;
+                break;
+            //Paraguai:
+            case 3:
+                this.tempo = 4;
                 break;
         }
     }
 
     @Override
-     //calcula a distancia de viagem a partir do destino
-    public void calcularDistancia(int destino) {
-       switch(destino){
-           //Sao paulo
-           case 1:
-               this.distancia = 434;
-               break;
-           //Fortaleza
-           case 2:
-               this.distancia = (float) 2364;
-               break;
-            //Paraguai:
-           case 3:
-               this.distancia = (float) 1159;
-               break;
-       } 
-        
-       
+    //calcula o preço de viagem a partir do destino
+    public void calcularPreco(int destino, int empresa) {
+
+        switch (empresa) {
+            case 1:
+                switch (destino) {
+                    //Sao paulo
+                    case 1:
+                        this.preco = (float) 400;
+                        break;
+                    //Fortaleza
+                    case 2:
+                        this.preco = (float) 1140;
+                        break;
+                    //Paraguai:
+                    case 3:
+                        this.preco = (float) 928;
+                        break;
+                }
+                break;
+            case 2:
+                switch (destino) {
+                    //Sao paulo
+                    case 1:
+                        this.preco = (float) 256;
+                        break;
+                    //Fortaleza
+                    case 2:
+                        this.preco = (float) 1300;
+                        break;
+                    //Paraguai:
+                    case 3:
+                        this.preco = (float) 572;
+                        break;
+                }
+
+                break;
+        }
     }
-    
-    public PassagemAviao getPassagem(){
+
+    @Override
+    //calcula a distancia de viagem a partir do destino
+    public void calcularDistancia(int destino) {
+        switch (destino) {
+            //Sao paulo
+            case 1:
+                this.distancia = 434;
+                break;
+            //Fortaleza
+            case 2:
+                this.distancia = (float) 2364;
+                break;
+            //Paraguai:
+            case 3:
+                this.distancia = (float) 1159;
+                break;
+        }
+
+    }
+
+    public PassagemAviao getPassagem() {
         return this;
     }
-    
+
     @Override
-    public UUID gerarId(){
-        return(UUID.randomUUID());
+    public UUID gerarId() {
+        return (UUID.randomUUID());
     }
 
     @Override
     public String toString() {
-        return "ID: " + id + "\nCPF: "+cpf+"\nNome: "+nome+"\nTempo: "+tempo+"hrs\nDistancia: "+distancia+" km\nPreco: R$"+preco;
+        return "ID: " + id + "\nCPF: " + cpf + "\nNome: " + nome + "\nTempo: " + tempo + "hrs\nDistancia: " + distancia + " km\nPreco: R$" + preco;
     }
-    
-   
+
     public float getPreco() {
         return preco;
     }

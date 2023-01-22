@@ -4,6 +4,8 @@
  */
 package controller;
 
+import model.AdapterAluguel;
+import model.AluguelCarro;
 import model.Passagem;
 import model.PassagemOnibus;
 
@@ -29,6 +31,12 @@ public class EmpresaCometa implements Empresa{
     public Passagem criarPassagemBarco(int empresa, int destino, String nome, int cpf) {
          PassagemOnibus x = new PassagemOnibus();
         return(x.gerarPassagem(empresa, destino, nome, cpf));
+    }
+
+    @Override
+    public Passagem criarPassagemCarro(int passagem, int destino, String nome, int cpf) {
+        AdapterAluguel x = new AdapterAluguel();
+        return(x.gerarPassagem(cpf, destino, nome, cpf));
     }
     
 }

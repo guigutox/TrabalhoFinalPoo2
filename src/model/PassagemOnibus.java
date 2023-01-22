@@ -12,13 +12,6 @@ import java.util.UUID;
  */
 public class PassagemOnibus extends Passagem{
 
-    private float preco;
-    private float distancia;
-    private int tempo;
-    private String nome;
-    private int cpf;
-    private UUID id;
-    private int empresa;
     
     @Override
     //Gera uma passagem de onibus e retorna usando todos os parametros + dados gerados na classe
@@ -94,9 +87,6 @@ public class PassagemOnibus extends Passagem{
                 
                 break;
         }
-            
-           
-       
     }
 
     @Override
@@ -116,8 +106,6 @@ public class PassagemOnibus extends Passagem{
                this.distancia = (float) 1230;
                break;
        } 
-        
-       
     }
     
     public PassagemOnibus getPassagem(){

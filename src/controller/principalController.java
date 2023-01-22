@@ -105,7 +105,7 @@ public class principalController implements Initializable {
         String empresaEscolhida = empresa.getText();
         
         switch(empresaEscolhida){
-            case "União":
+            case "Cometa":
                 switch (transporte) {
                     case "Ônibus":
                         //Cria uma passagem de onibus
@@ -119,13 +119,16 @@ public class principalController implements Initializable {
                         //Cria uma passagem de barco
                         p = empC.criarPassagemBarco(1,destino, nome, cpf);
                         break;
+                    case "Carro":
+                        p = empC.criarPassagemCarro(destino, destino, nome, cpf);
+                        break;
                     default:
                         break;
                  }
                 break;
                 
                 
-            case "Cometa":
+            case "União":
                 switch (transporte) {
                     case "Ônibus":
                         //Cria uma passagem de onibus
@@ -138,6 +141,9 @@ public class principalController implements Initializable {
                     case "Barco":
                         //Cria uma passagem de barco
                          p = empU.criarPassagemBarco(2,destino, nome, cpf);
+                        break;
+                                        case "Carro":
+                        p = empU.criarPassagemCarro(destino, destino, nome, cpf);
                         break;
                     default:
                         break;

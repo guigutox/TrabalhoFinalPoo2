@@ -49,5 +49,6 @@
       </RadioButton>
       <Label layoutX="200.0" layoutY="183.0" text="Empresa" />
       <RadioButton layoutX="200.0" layoutY="240.0" mnemonicParsing="false" text="Cometa" toggleGroup="$empresa" />
+      <RadioButton layoutX="114.0" layoutY="295.0" mnemonicParsing="false" selected="true" text="Carro" toggleGroup="$transporte" />
     </children>
 </AnchorPane>

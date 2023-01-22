@@ -15,6 +15,6 @@ public interface Empresa {
     public Passagem criarPassagemOnibus(int passagem, int destino, String nome, int cpf);
     public Passagem criarPassagemAviao(int passagem, int destino, String nome, int cpf);
     public Passagem criarPassagemBarco(int passagem, int destino, String nome, int cpf);
-    
+    public Passagem criarPassagemCarro(int passagem, int destino, String nome, int cpf);
     
 }
