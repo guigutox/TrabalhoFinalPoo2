@@ -3,10 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/guilh/Downloads/Java_POO_II-master/Java_POO_II-master/TrabalhoFinalPoo2-main/test/controller/EmpresaCometaTest.java</file>
-            <file>file:/C:/Users/guilh/Downloads/Java_POO_II-master/Java_POO_II-master/TrabalhoFinalPoo2-main/src/controller/main.java</file>
-            <file>file:/C:/Users/guilh/Downloads/Java_POO_II-master/Java_POO_II-master/TrabalhoFinalPoo2-main/src/controller/Empresa.java</file>
-            <file>file:/C:/Users/guilh/Downloads/Java_POO_II-master/Java_POO_II-master/TrabalhoFinalPoo2-main/src/controller/BuscaController.java</file>
+            <file>file:/C:/Users/guilh/OneDrive/Documents/GitHub/TrabalhoFinalPoo2/src/model/PassagemAviao.java</file>
+            <file>file:/C:/Users/guilh/OneDrive/Documents/GitHub/TrabalhoFinalPoo2/src/controller/principalController.java</file>
+            <file>file:/C:/Users/guilh/OneDrive/Documents/GitHub/TrabalhoFinalPoo2/src/model/PassagemBarco.java</file>
+            <file>file:/C:/Users/guilh/OneDrive/Documents/GitHub/TrabalhoFinalPoo2/src/controller/EmpresaCometa.java</file>
+            <file>file:/C:/Users/guilh/OneDrive/Documents/GitHub/TrabalhoFinalPoo2/src/model/PassagemOnibus.java</file>
         </group>
     </open-files>
 </project-private>

@@ -120,7 +120,7 @@ public class principalController implements Initializable {
                         p = empC.criarPassagemBarco(1,destino, nome, cpf);
                         break;
                     case "Carro":
-                        p = empC.criarPassagemCarro(destino, destino, nome, cpf);
+                        p = empC.criarPassagemCarro(1, destino, nome, cpf);
                         break;
                     default:
                         break;
@@ -142,8 +142,8 @@ public class principalController implements Initializable {
                         //Cria uma passagem de barco
                          p = empU.criarPassagemBarco(2,destino, nome, cpf);
                         break;
-                                        case "Carro":
-                        p = empU.criarPassagemCarro(destino, destino, nome, cpf);
+                    case "Carro":
+                        p = empU.criarPassagemCarro(2, destino, nome, cpf);
                         break;
                     default:
                         break;

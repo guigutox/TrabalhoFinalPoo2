@@ -32,7 +32,7 @@ public class EmpresaUniao implements Empresa{
     }
     
         @Override
-    public Passagem criarPassagemCarro(int passagem, int destino, String nome, int cpf) {
+    public Passagem criarPassagemCarro(int empresa, int destino, String nome, int cpf) {
         AdapterAluguel x = new AdapterAluguel();
         return(x.gerarPassagem(cpf, destino, nome, cpf));
     }

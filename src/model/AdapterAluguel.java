@@ -19,6 +19,8 @@ public class AdapterAluguel extends Passagem{
      @Override
     public Passagem gerarPassagem(int empresa, int destino, String nome, int cpf) {
        
+        this.nome = nome;
+        this.cpf = cpf;
         calcularTempo(destino);
         calcularPreco(destino, empresa);
         calcularDistancia(destino);

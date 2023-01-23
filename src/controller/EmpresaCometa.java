@@ -29,7 +29,7 @@ public class EmpresaCometa implements Empresa{
 
     @Override
     public Passagem criarPassagemBarco(int empresa, int destino, String nome, int cpf) {
-         PassagemOnibus x = new PassagemOnibus();
+        PassagemOnibus x = new PassagemOnibus();
         return(x.gerarPassagem(empresa, destino, nome, cpf));
     }
 
