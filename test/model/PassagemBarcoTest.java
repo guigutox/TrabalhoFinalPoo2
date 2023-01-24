@@ -53,7 +53,7 @@ public class PassagemBarcoTest {
         int cpf = 0;
         
         PassagemBarco expResult = null;
-        PassagemBarco result = b.gerarPassagem(empresa, destino, nome, cpf);
+        Passagem result = b.gerarPassagem(empresa, destino, nome, cpf);
         
         assertNotEquals(expResult, result);
        

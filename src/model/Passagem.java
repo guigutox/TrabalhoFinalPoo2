@@ -22,11 +22,22 @@ public abstract class Passagem {
     protected int cpf;
     protected UUID id;
     
+    
+        //Gera uma passagem de onibus e retorna usando todos os parametros + dados gerados na classe
+    public Passagem gerarPassagem(int empresa,int destino, String nome, int cpf){
+        this.nome = nome;
+        this.cpf= cpf;
+        calcularTempo(destino);
+        calcularPreco(destino, empresa);
+        calcularDistancia(destino);
+        this.id = gerarId();
+        return this;
+    }
+    
     public abstract void calcularPreco(int destino, int empresa);
     public  abstract void calcularDistancia(int destino);
     public abstract void calcularTempo(int destino);
     public abstract UUID gerarId();
-    public abstract Passagem gerarPassagem(int empresa,int destino, String nome, int cpf);
     public abstract UUID getId();
     public abstract String getNome();
     public abstract int getCpf();

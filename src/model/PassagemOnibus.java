@@ -10,21 +10,7 @@ import java.util.UUID;
  *
  * @author guilh
  */
-public class PassagemOnibus extends Passagem{
-
-    
-    @Override
-    //Gera uma passagem de onibus e retorna usando todos os parametros + dados gerados na classe
-    public PassagemOnibus gerarPassagem(int empresa,int destino, String nome, int cpf){
-        this.nome = nome;
-        this.cpf= cpf;
-        calcularTempo(destino);
-        calcularPreco(destino, empresa);
-        calcularDistancia(destino);
-        this.id = gerarId();
-        return this;
-    }
-    
+public class PassagemOnibus extends Passagem{  
     
     @Override
     //calcula o tempo de viagem a partir do destino

@@ -54,7 +54,7 @@ public class PassagemOnibusTest {
         int cpf = 0;
         
         PassagemOnibus expResult = null;
-        PassagemOnibus result = o.gerarPassagem(empresa, destino, nome, cpf);
+        Passagem result = o.gerarPassagem(empresa, destino, nome, cpf);
         
         assertNotEquals(expResult, result);
     }

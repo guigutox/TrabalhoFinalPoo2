@@ -16,19 +16,6 @@ public class AdapterAluguel extends Passagem{
     private AluguelCarro ac = new AluguelCarro();
     
     
-     @Override
-    public Passagem gerarPassagem(int empresa, int destino, String nome, int cpf) {
-       
-        this.nome = nome;
-        this.cpf = cpf;
-        calcularTempo(destino);
-        calcularPreco(destino, empresa);
-        calcularDistancia(destino);
-        this.id = gerarId();
-        return this;
-    }
-    
-    
     @Override
     public void calcularPreco(int destino, int empresa) {
         this.preco = ac.custoAluguel(destino, empresa) + ac.precoDaGasolina(destino);

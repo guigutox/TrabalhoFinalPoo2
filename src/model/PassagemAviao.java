@@ -14,18 +14,6 @@ public class PassagemAviao extends Passagem {
 
 
     @Override
-    //Gera uma passagem de onibus e retorna usando todos os parametros + dados gerados na classe
-    public PassagemAviao gerarPassagem(int empresa, int destino, String nome, int cpf) {
-        this.nome = nome;
-        this.cpf = cpf;
-        calcularTempo(destino);
-        calcularPreco(destino, empresa);
-        calcularDistancia(destino);
-        this.id = gerarId();
-        return this;
-    }
-
-    @Override
     //calcula o tempo de viagem a partir do destino
     public void calcularTempo(int destino) {
         switch (destino) {

@@ -54,7 +54,7 @@ public class PassagemAviaoTest {
         
     
         PassagemAviao expResult = null;
-        PassagemAviao result = a.gerarPassagem(empresa, destino, nome, cpf);
+        Passagem result = a.gerarPassagem(empresa, destino, nome, cpf);
         assertNotEquals(expResult, result);
     }
 
