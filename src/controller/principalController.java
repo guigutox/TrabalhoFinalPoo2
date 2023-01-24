@@ -160,17 +160,17 @@ public class principalController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         
-        txt_cpf.textProperty().addListener(
-                (obesrvable, oldValue, newValue)->{
-                    try{
-                        if(!newValue.equals("")) parseInt(newValue);
-                    }catch(Exception ex){
-                        txt_cpf.setText(oldValue);
+            txt_cpf.textProperty().addListener(
+                    (obesrvable, oldValue, newValue)->{
+                        try{
+                            if(!newValue.equals("")) parseInt(newValue);
+                        }catch(Exception ex){
+                            txt_cpf.setText(oldValue);
+                        }
                     }
-                }
-        
-        
-        );
+
+
+            );
         
         
     }    

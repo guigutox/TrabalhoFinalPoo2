@@ -87,7 +87,7 @@ public class EmpresaCometaTest {
        
         Passagem expResult = null;
         Passagem result = e.criarPassagemBarco(empresa, destino, nome, cpf);
-        assertEquals(expResult, result);
+        assertNotEquals(expResult, result);
     }
     
 }

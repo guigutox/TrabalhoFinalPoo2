@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="DESKTOP-5747QOD" name="controller.EmpresaCometaTest" skipped="0" tests="3" time="0.359" timestamp="2023-01-23T20:12:15">
+<testsuite errors="0" failures="0" hostname="DESKTOP-5747QOD" name="controller.EmpresaCometaTest" skipped="0" tests="3" time="0.313" timestamp="2023-01-24T11:47:34">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="BR" />
@@ -60,7 +60,7 @@
     <property name="libs.spring-webmvc5.0.javadoc" value="" />
     <property name="libs.spring-framework500.classpath" value="C:\Program Files\NetBeans-16\netbeans\platform\modules\org-apache-commons-logging.jar;C:\Program Files\NetBeans-16\netbeans\java\modules\ext\cglib-2.2.jar;C:\Program Files\NetBeans-16\netbeans\java\modules\ext\spring-5\spring-aop-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-16\netbeans\java\modules\ext\spring-5\spring-aspects-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-16\netbeans\java\modules\ext\spring-5\spring-beans-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-16\netbeans\java\modules\ext\spring-5\spring-context-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-16\netbeans\java\modules\ext\spring-5\spring-context-indexer-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-16\netbeans\java\modules\ext\spring-5\spring-context-support-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-16\netbeans\java\modules\ext\spring-5\spring-core-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-16\netbeans\java\modules\ext\spring-5\spring-expression-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-16\netbeans\java\modules\ext\spring-5\spring-instrument-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-16\netbeans\java\modules\ext\spring-5\spring-jcl-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-16\netbeans\java\modules\ext\spring-5\spring-jdbc-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-16\netbeans\java\modules\ext\spring-5\spring-jms-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-16\netbeans\java\modules\ext\spring-5\spring-messaging-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-16\netbeans\java\modules\ext\spring-5\spring-orm-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-16\netbeans\java\modules\ext\spring-5\spring-oxm-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-16\netbeans\java\modules\ext\spring-5\spring-test-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-16\netbeans\java\modules\ext\spring-5\spring-tx-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-16\netbeans\java\modules\ext\spring-5\spring-web-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-16\netbeans\java\modules\ext\spring-5\spring-webflux-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-16\netbeans\java\modules\ext\spring-5\spring-webmvc-5.2.9.RELEASE.jar;C:\Program Files\NetBeans-16\netbeans\java\modules\ext\spring-5\spring-websocket-5.2.9.RELEASE.jar" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner controller.EmpresaCometaTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\guilh\OneDrive\Documents\GitHub\TrabalhoFinalPoo2\build\test\results\TEST-controller.EmpresaCometaTest.xml crashfile=C:\Users\guilh\OneDrive\Documents\GitHub\TrabalhoFinalPoo2\build\junitvmwatcher1742490200140245704.properties propsfile=C:\Users\guilh\OneDrive\Documents\GitHub\TrabalhoFinalPoo2\build\junit4746811511097431836.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner controller.EmpresaCometaTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\guilh\OneDrive\Documents\GitHub\TrabalhoFinalPoo2\build\test\results\TEST-controller.EmpresaCometaTest.xml crashfile=C:\Users\guilh\OneDrive\Documents\GitHub\TrabalhoFinalPoo2\build\junitvmwatcher8387690864668783600.properties propsfile=C:\Users\guilh\OneDrive\Documents\GitHub\TrabalhoFinalPoo2\build\junit17359249708970181866.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="build.sysclasspath" value="ignore" />
     <property name="manifest.encoding" value="UTF-8" />
@@ -114,7 +114,7 @@
     <property name="javac.debug" value="true" />
     <property name="javadoc.splitindex" value="true" />
     <property name="file.separator" value="\" />
-    <property name="javac.includesfile.binary" value="C:\Users\guilh\OneDrive\Documents\GitHub\TrabalhoFinalPoo2\null1062510779" />
+    <property name="javac.includesfile.binary" value="C:\Users\guilh\OneDrive\Documents\GitHub\TrabalhoFinalPoo2\null418123741" />
     <property name="libs.junit_4.maven-pom" value="" />
     <property name="javac.test.processorpath" value="C:\Program Files\Java\jdk1.8.0_202/jre/lib/javaws.jar:C:\Program Files\Java\jdk1.8.0_202/jre/lib/deploy.jar:C:\Program Files\Java\jdk1.8.0_202/jre/lib/plugin.jar:build/classes:C:\Program Files\NetBeans-16\netbeans\platform\modules\ext\junit-4.13.2.jar:C:\Program Files\NetBeans-16\netbeans\platform\modules\ext\hamcrest-core-1.3.jar" />
     <property name="netbeans.buildnumber" value="16-321935444b183aea1c4ff255d8d2ab8d50c60606" />
@@ -127,7 +127,6 @@
     <property name="sun.java.launcher" value="SUN_STANDARD" />
     <property name="libs.jaxb.javadoc" value="C:\Program Files\NetBeans-16\netbeans\ide\docs\jaxb-api-doc.jar" />
     <property name="libs.struts.classpath" value="C:\Program Files\NetBeans-16\netbeans\enterprise\modules\ext\struts\antlr-2.7.2.jar;C:\Program Files\NetBeans-16\netbeans\enterprise\modules\ext\struts\bsf-2.3.0.jar;C:\Program Files\NetBeans-16\netbeans\enterprise\modules\ext\struts\commons-beanutils-1.8.0.jar;C:\Program Files\NetBeans-16\netbeans\enterprise\modules\ext\struts\commons-chain-1.2.jar;C:\Program Files\NetBeans-16\netbeans\enterprise\modules\ext\struts\commons-digester-1.8.jar;C:\Program Files\NetBeans-16\netbeans\enterprise\modules\ext\struts\commons-fileupload-1.1.1.jar;C:\Program Files\NetBeans-16\netbeans\enterprise\modules\ext\struts\commons-io-1.1.jar;C:\Program Files\NetBeans-16\netbeans\enterprise\modules\ext\struts\commons-logging-1.0.4.jar;C:\Program Files\NetBeans-16\netbeans\enterprise\modules\ext\struts\commons-validator-1.3.1.jar;C:\Program Files\NetBeans-16\netbeans\enterprise\modules\ext\struts\jstl-1.0.2.jar;C:\Program Files\NetBeans-16\netbeans\enterprise\modules\ext\struts\oro-2.0.8.jar;C:\Program Files\NetBeans-16\netbeans\enterprise\modules\ext\struts\standard-1.0.6.jar;C:\Program Files\NetBeans-16\netbeans\enterprise\modules\ext\struts\struts-core-1.3.10.jar;C:\Program Files\NetBeans-16\netbeans\enterprise\modules\ext\struts\struts-el-1.3.10.jar;C:\Program Files\NetBeans-16\netbeans\enterprise\modules\ext\struts\struts-extras-1.3.10.jar;C:\Program Files\NetBeans-16\netbeans\enterprise\modules\ext\struts\struts-faces-1.3.10.jar;C:\Program Files\NetBeans-16\netbeans\enterprise\modules\ext\struts\struts-mailreader-dao-1.3.10.jar;C:\Program Files\NetBeans-16\netbeans\enterprise\modules\ext\struts\struts-scripting-1.3.10.jar;C:\Program Files\NetBeans-16\netbeans\enterprise\modules\ext\struts\struts-taglib-1.3.10.jar;C:\Program Files\NetBeans-16\netbeans\enterprise\modules\ext\struts\struts-tiles-1.3.10.jar" />
-    <property name="org.openide.awt.SwingBrowserImpl.do-not-block-awt" value="false" />
     <property name="javac.includes.binary" value="C:\Users\guilh\OneDrive\Documents\GitHub\TrabalhoFinalPoo2\build\test\classes\controller\EmpresaCometaTest.class" />
     <property name="ant.home" value="C:\Program Files\NetBeans-16\netbeans\extide\ant" />
     <property name="libs.junit_4.src" value="C:\Program Files\NetBeans-16\netbeans\platform\docs\junit-4.13.2-sources.jar" />
@@ -452,18 +451,9 @@
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
     <property name="libs.javaee-web-api-7.0.javadoc" value="C:\Program Files\NetBeans-16\netbeans\enterprise\docs\javaee-doc-api.jar" />
   </properties>
-  <testcase classname="controller.EmpresaCometaTest" name="testCriarPassagemOnibus" time="0.267" />
-  <testcase classname="controller.EmpresaCometaTest" name="testCriarPassagemAviao" time="0.001" />
-  <testcase classname="controller.EmpresaCometaTest" name="testCriarPassagemBarco" time="0.008">
-    <failure message="expected:&lt;null&gt; but was:&lt;ID: 498e919b-2a1a-4136-97f6-ce1086a39819&#xa;CPF: 0&#xa;Nome: &#xa;Tempo: 0hrs&#xa;Distancia: 0.0 km&#xa;Preco: R$0.0&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;null&gt; but was:&lt;ID: 498e919b-2a1a-4136-97f6-ce1086a39819
-CPF: 0
-Nome: 
-Tempo: 0hrs
-Distancia: 0.0 km
-Preco: R$0.0&gt;
-	at controller.EmpresaCometaTest.testCriarPassagemBarco(EmpresaCometaTest.java:90)
-</failure>
-  </testcase>
+  <testcase classname="controller.EmpresaCometaTest" name="testCriarPassagemOnibus" time="0.222" />
+  <testcase classname="controller.EmpresaCometaTest" name="testCriarPassagemAviao" time="0.0" />
+  <testcase classname="controller.EmpresaCometaTest" name="testCriarPassagemBarco" time="0.0" />
   <system-out><![CDATA[criarPassagemOnibus
 criarPassagemAviao
 criarPassagemBarco
